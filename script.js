@@ -49,6 +49,30 @@ const restaurant = {
   },
 };
 
+// Optional Chaining (?.)
+
+// Wrong way
+if (restaurant.openingHours && restaurant.openingHours.mon)
+  console.log(restaurant.openingHours.mon.open);
+
+// WITH optional chaining
+console.log(restaurant.openingHours.mon?.open);
+
+// Example
+const days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+for (const day of days) {
+  const open = restaurant.openingHours[day]?.open ?? 'closed';
+  console.log(`On ${day}, we open at ${open}`);
+}
+
+// Methods
+console.log(restaurant.order?.(0, 1) ?? 'Merthods does no exist');
+console.log(restaurant.orderRisotto?.(0, 1) ?? 'Merthods does no exist');
+
+// Arrays
+const users = [{ name: 'Victor', email: 'victorzk6@hotmail.com' }];
+console.log(users[0]?.name ?? 'Users array empty');
+
 /*
 // The for-of Loop
 const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
