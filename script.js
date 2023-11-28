@@ -1,10 +1,9 @@
 'use strict';
-/*
+
 // Data needed for a later exercise
 const flights =
   '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
-*/
-/*
+
 const openingHours = {
   thu: {
     open: 12,
@@ -49,6 +48,36 @@ const restaurant = {
   },
 };
 
+const orderSet = new Set([
+  'Pasta',
+  'Pizza',
+  'Pizza',
+  'Risotto',
+  'Pasta',
+  'Pizza',
+]);
+console.log(orderSet);
+console.log(new Set('Jonas'));
+console.log(orderSet.has('Pizza'));
+console.log(orderSet.has('Bread'));
+orderSet.add('Garlic Bread');
+orderSet.add('Garlic Bread');
+console.log(orderSet);
+orderSet.delete('Garlic Bread');
+// orderSet.clear();
+console.log(orderSet);
+
+for (const order of orderSet) console.log(order);
+
+// Example
+const staff = ['Waiter', 'Chef', 'Waiter', 'Manage', 'Chef', 'Waiter'];
+const staffUnique = [...new Set(staff)]; //'...' make it an array
+console.log(staffUnique);
+
+console.log(new Set(staffUnique).size);
+console.log(new Set('victorhugo').size);
+
+/*
 // Looping Objects: Object Keys, Values, and Entries
 
 // Property NAMES
@@ -354,7 +383,7 @@ console.log(p, q, r);
 // TEST DATA FOR 6: Use players 'Davies', 'Muller', 'Lewandowski' and 'Kimmich'. Then, call the function again with players from game.scored
 
 // GOOD LUCK 😀
-
+/*
 const game = {
   team1: 'Bayern Munich',
   team2: 'Borrussia Dortmund',
@@ -395,6 +424,7 @@ const game = {
     team2: 6.5,
   },
 };
+*/
 /*
 // 1
 const [players1, players2] = game.players;
@@ -422,7 +452,7 @@ printGoals(...game.scored);
 // 7
 team1 > team2 && console.log('Team 1 is more likely to win');
 */
-
+/*
 ///////////////////////////////////////
 // Coding Challenge #2
 
@@ -463,3 +493,4 @@ for (const [team, odd] of Object.entries(game.odds)) {
   const teamStr = team === 'x' ? 'draw' : `victory ${game[team]}`;
   console.log(`Odd of ${teamStr}: ${odd}`);
 }
+*/
